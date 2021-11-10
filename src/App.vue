@@ -39,7 +39,6 @@
         </router-link>
       </v-btn>
     </v-app-bar>
-
     <v-main>
       <router-view />
     </v-main>
