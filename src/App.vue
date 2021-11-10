@@ -1,8 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-    >
+    <v-app-bar app>
       <div class="d-flex align-center">
         <!-- <v-img
           alt="Vuetify Logo"
@@ -18,49 +16,39 @@
       <v-spacer></v-spacer>
 
       <v-btn text>
-        <router-link
-          class="text-decoration-none"
-          :to="{ name: 'login'}"
-        >
-        Login
+        <router-link class="text-decoration-none" :to="{ name: 'login' }">
+          Login
+        </router-link>
+      </v-btn>
+      <v-btn text>
+        <router-link class="text-decoration-none" :to="{ name: 'cadastro' }">
+          Cadastro
         </router-link>
       </v-btn>
       <v-btn text>
         <router-link
           class="text-decoration-none"
-          :to="{ name: 'cadastro'}"
-        >
-        Cadastro
-        </router-link>
-      </v-btn>
-      <v-btn text>
-        <router-link
-          class="text-decoration-none"
-          :to="{ name: 'redefinirSenha'}"
+          :to="{ name: 'redefinirSenha' }"
         >
           Redefinir Senha
         </router-link>
       </v-btn>
       <v-btn text>
-        <router-link
-          class="text-decoration-none"
-          to="/home"
-        >
-        Home
+        <router-link class="text-decoration-none" to="/home">
+          Home
         </router-link>
       </v-btn>
     </v-app-bar>
 
     <v-main>
-      <router-view/>
+      <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+  name: "App",
 
   data: () => ({
     //

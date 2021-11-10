@@ -1,11 +1,7 @@
 <template>
-    <div class="about">
-        <h1>Login</h1>
-    </div>
+  <div class="about">
+    <h1>Login</h1>
+  </div>
 </template>
-<script>
-
-</script>
-<style>
-
-</style>
+<script></script>
+<style></style>
