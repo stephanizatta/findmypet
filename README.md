@@ -16,7 +16,7 @@ As tecnologias empregadas no projeto são:
 - Vue.JS;
 - Vuetify;
 - PHP.
-
+ 
 <a name="pre"/>
 
 ## :baby_chick: Pré-configuração
@@ -24,24 +24,38 @@ As tecnologias empregadas no projeto são:
 Para que seja possível configurar o projeto, é necessário que você tenha instalado um gerenciador de pacote (como o `npm` ou o `yarn`).
 Como exemplo, abaixo segue o passo a passo de como instalar o NPM.
 
-### Baixando e instalando o NodeJS
 
+### /// Baixando e instalando o NodeJS
+
+<details>
+<summary> Conferir passo a passo </summary>
+ 
 1. Pelo navegador, acesse o site https://nodejs.org/en/
 2. Na página, clique no botão de instalação do LTS. Um arquivo será baixado;
 3. Após baixado, execute o arquivo de instalação;
 4. Faça a instalação normal/recomendada.
+ 
+</details>
+ 
+### /// Acessando o terminal
 
-### Acessando o terminal
-
+<details>
+<summary> <i>Conferir passo a passo</i> </summary>
+ 
 1. No Windows, abra o menu Iniciar;
 2. Em seguida, pesquise pelo terminal de sua preferência. Para este exemplo, utilizaremos o **Windows PowerShell**. Procure por ele;
 > Você também pode utilizar outro terminal, como o Windows Terminal, disponível na Microsoft Store gratuitamente.
 3. Com o botão direito do mouse, clique sobre o programa;
 4. Dentre as opções, escolha "**Executar como administrador**";
-5. Caso seja exibido um alerta de segurança, clique em "**Sim**";
+5. Caso seja exibido um alerta de segurança, clique em "**Sim**".
 
-### Acessando o diretório de desenvolvimento
+</details>
+ 
+### /// Acessando o diretório de desenvolvimento
 
+<details>
+<summary> <i>Conferir passo a passo</i> </summary>
+ 
 Agora você precisa acessar o local onde estará seu repositório. Para este exemplo, vamos assumir que o *PowerShell* iniciou o terminal em `C:/Users/Usuario` e queremos chegar até `C:/Code`.
 
 #### Forma menos otimizada
@@ -57,6 +71,8 @@ Pronto. A pasta foi acessada com sucesso.
 #### Forma rápida
 1. Na janela que se abrir, digite o comando `cd ../../Code`
 
+</details>
+ 
 <a name="config"/>
 
 ## :chicken: Configurando o projeto
