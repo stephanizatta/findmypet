@@ -107,14 +107,16 @@ npm run serve
 ### 4. Confira seu navegador
 Após isso, o seu projeto estará rodando localmente. Confira o endereço `localhost:8080`
 
+___
+
 COMANDOS ADICIONAIS:
 
-### Compila e minifica os arquivos para produção
+#### Compila e minifica os arquivos para produção
 ```
 npm run build
 ```
 
-### Verifica erros de sintaxe e escrita de código
+#### Verifica erros de sintaxe e escrita de código
 ```
 npm run lint
 ```
