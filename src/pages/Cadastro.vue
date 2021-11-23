@@ -32,7 +32,46 @@
 </template>
 
 <script>
-  
+  export default {
+    name: 'Cadastro',
+    data() { 
+      return {
+        nome: '',
+        email: '',
+        celular: '',
+        endereco: '',
+        nr_residencial: '',
+        complemento: '',
+        senha: '',
+        repita_senha: '',
+        pergunta_seguranca: '',
+        resposta: '',
+      }
+    },
+
+    methods: {
+      verificaCampos() {
+        if(this.nome == '' ||
+          this.email == '' ||
+          this.celular == '' ||
+          this.endereco == '' ||
+          this.nr_residencial == '' ||
+          this.complemento == '' ||
+          this.senha == '' ||
+          this.pergunta_seguranca == '' ||
+          this.resposta == ''
+        ){
+          alert("Todos os campos devem ser preenchidos!");
+          return false;
+        }
+
+        if(this.repita_senha != this.senha) {
+          alert("As senhas não correspondem");
+          return false;
+        }
+      }
+    }
+  }
 </script>
 
 <style>
