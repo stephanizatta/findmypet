@@ -12,24 +12,28 @@
         <input v-model="complemento" type="text" class="inputs" id="complemento" placeholder="Complemento"> <br>
         <input v-model="senha" type="password" class="inputs" id="senha" placeholder="Senha"> <br>
         <input v-model="repita_senha" type="password" class="inputs" id="repita-senha" placeholder="Repita sua senha"> <br>
-        <select name="pergunta-seguranca" class="inputs" id="pergunta-seguranca">
-            <option value="nm-primeiro-pet">Nome do seu primeiro pet</option>    
-            <option value="anos-primeiro-pet">Com quantos anos teve seu primeiro pet</option>    
-            <option value="quantos-pets-teve">Quantos pets você já teve</option>    
-            <option value="raca-ultimo-pet">Raça do seu último pet</option>    
-            <option value="primeiro-pet">Qual foi seu primeiro pet</option>    
-            <option value="pet-favorito">Qual seu pet favorito</option>    
+        <select v-model="pergunta_seguranca" name="pergunta-seguranca" class="inputs" id="pergunta-seguranca">
+          <option value="nm-primeiro-pet">Nome do seu primeiro pet</option>    
+          <option value="anos-primeiro-pet">Com quantos anos teve seu primeiro pet</option>    
+          <option value="quantos-pets-teve">Quantos pets você já teve</option>    
+          <option value="raca-ultimo-pet">Raça do seu último pet</option>    
+          <option value="primeiro-pet">Qual foi seu primeiro pet</option>    
+          <option value="pet-favorito">Qual seu pet favorito</option>    
         </select> <br>
         <input v-model="resposta" type="text" class="inputs" id="resposta" placeholder="Resposta"> <br><br> 
       
         <div id="div-botoes">
-          <input type="submit" class="botoes" id="btn-limpar" name="btn-limpar" value="Limpar" @click="limparCampos()">
+          <input type="reset" class="botoes" id="btn-limpar" name="btn-limpar" value="Limpar">
           <input type="submit" class="botoes" id="btn-enviar" name="btn-enviar" value="Enviar" @click="verificaCampos()">
         </div>
       </fieldset>
     </form>
   </div> 
 </template>
+
+<script>
+  
+</script>
 
 <style>
   fieldset{
@@ -72,6 +76,7 @@
     width: 5rem;
     margin-right: 13px;
     float: right;
+    border: 2px groove rgb(192, 192, 192);
   }
 
   .botoes:hover {
@@ -81,12 +86,6 @@
   .inputs{
     width: 30rem;
     height: 1.2rem;
-    box-shadow: 15px;
-    border: 80px;
-    outline: 15%;
+    border: 2px groove rgb(192, 192, 192);
   }
 </style>
-
-<script>
-  
-</script>
