@@ -12,8 +12,9 @@
         <input v-model="complemento" type="text" class="inputs" id="complemento" placeholder="Complemento"> <br>
         <input v-model="senha" type="password" class="inputs" id="senha" placeholder="Senha"> <br>
         <input v-model="repita_senha" type="password" class="inputs" id="repita-senha" placeholder="Repita sua senha"> <br>
-        <select v-model="pergunta_seguranca" name="pergunta-seguranca" class="inputs" id="pergunta-seguranca">
-          <option value="nm-primeiro-pet">Nome do seu primeiro pet</option>    
+        <select v-model="pergunta_seguranca" name="pergunta-seguranca" class="inputs" id="pergunta-seguranca" placeholder="Selecione">
+          <option value="" disabled selected>Selecione</option>
+          <option value="nm-primeiro-pet" selected>Nome do seu primeiro pet</option>    
           <option value="anos-primeiro-pet">Com quantos anos teve seu primeiro pet</option>    
           <option value="quantos-pets-teve">Quantos pets você já teve</option>    
           <option value="raca-ultimo-pet">Raça do seu último pet</option>    
@@ -58,11 +59,14 @@
           this.nr_residencial == '' ||
           this.complemento == '' ||
           this.senha == '' ||
-          this.pergunta_seguranca == '' ||
           this.resposta == ''
         ){
           alert("Todos os campos devem ser preenchidos!");
           return false;
+        }
+
+        if (this.pergunta_seguranca == ""){
+          alert('Escolha uma pergunta de segurança');
         }
 
         if(this.repita_senha != this.senha) {
@@ -90,18 +94,20 @@
   h1{
     font-size: 2.5rem;
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
   }
 
   #endereco{
     width: 390px;
+    margin-right: 10px;
   }
   #nr-residencia{
     width: 80px;
   }
   #pergunta-seguranca{
-    width: 488px;
-    height: 1.5rem;
+    width: 480px;
+    height: 1.3rem;
+    margin-top: 3px
   }
 
   #div-botoes{
@@ -126,5 +132,6 @@
     width: 30rem;
     height: 1.2rem;
     border: 2px groove rgb(192, 192, 192);
+    margin-bottom: 3px;
   }
 </style>

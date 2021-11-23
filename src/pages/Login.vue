@@ -4,8 +4,8 @@
       <fieldset>   
         <h1>Login</h1>
         <form action="/action_page.php"></form>
-        <input type="e-mail" id="fname" class="input" name="fname" placeholder="E-mail"> <br><br>
-        <input type="password" id="lname" class="input" name="lname" placeholder="Senha" autocomplete="on"> <br><br>
+        <input v-model="email" type="e-mail" id="fname" class="input" name="fname" placeholder="E-mail"> <br><br>
+        <input v-model="senha" type="password" id="lname" class="input" name="lname" placeholder="Senha" autocomplete="on"> <br><br>
 
         <input type="checkbox" id="lembrardemim" name="lembrardemim" onclick="autocomplete(on)">
         <label for="lembrardemim">  Lembrar de mim </label>
@@ -18,7 +18,7 @@
         </p>
 
         <div class="btn-login">
-          <button>Entrar</button>
+          <button @click="verificaCampos()">Entrar</button>
         </div>
 
         <div>
@@ -33,7 +33,26 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+    name: 'Login',
+    data() { 
+      return {
+        email: '',
+        senha: '',
+      }
+    },
+
+    methods: {
+      verificaCampos() {
+        if(this.email == '' || this.senha == ''){
+          alert("Todos os campos devem ser preenchidos!");
+          return false;
+        }
+      }
+    }
+  }
+</script>
 
 <style>
 h1 {
@@ -44,18 +63,11 @@ h1 {
 .input {
   width: 20rem;
   height: 1.2rem;
+  border: 2px groove rgb(192, 192, 192);
 }
 
 #lembrardemim {
   margin-bottom: 2rem;
-}
-
-#btn-entrar {
-  position: absolute;
-}
-
-button:hover {
-  background-color: rgb(18, 187, 94);
 }
 
 #esqueceu-senha{
@@ -68,6 +80,15 @@ button:hover {
 }
 
 .btn-login{
-  padding-bottom: 2.5rem;
+  height: 2rem;
+  width: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  border: 2px groove rgb(192, 192, 192);  
+}
+
+.btn-login:hover {
+  background-color: rgb(197, 197, 197);
 }
 </style>
