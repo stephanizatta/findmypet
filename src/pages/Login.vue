@@ -7,7 +7,8 @@
         <input v-model="email" type="e-mail" id="fname" class="input" name="fname" placeholder="E-mail"> <br><br>
         <input v-model="senha" type="password" id="lname" class="input" name="lname" placeholder="Senha" autocomplete="on"> <br><br>
 
-        <input type="checkbox" id="lembrardemim" name="lembrardemim" onclick="autocomplete(on)">
+        <input type="checkbox" id="lembrardemim" name="lembrardemim" onclick="setCookie">
+        
         <label for="lembrardemim">  Lembrar de mim </label>
 
         <p id="esqueceu-senha">
@@ -92,3 +93,14 @@ h1 {
   background-color: rgb(197, 197, 197);
 }
 </style>
+
+<script>
+export default {
+   methods:{
+     setCookie(){
+         // it sets the cookie called `username`
+       this.$cookies.set("lname","fname");
+     }
+   }
+};
+</script>
