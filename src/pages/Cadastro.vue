@@ -4,7 +4,7 @@
     <form id="form-cadastro">
       <fieldset>                               
         <h1>Cadastre-se</h1>
-        <input v-model="nome" name="nome" type="text" class="inputs" id="nome" placeholder="Nome completo">  
+        <input v-model="nome" name="nome" type="text" class="inputs" id="nome" placeholder="Nome completo"> <br>   
         <input v-model="email" type="email" class="inputs" id="email" placeholder="E-mail"> <br>   
         <input v-model="celular" type="tel" class="inputs" id="celular" placeholder="Celular"> <br>    
         <input v-model="endereco" type="text" class="inputs" id="endereco" placeholder="Endereço">   
@@ -31,6 +31,16 @@
     </form>
   </div> 
 </template>
+
+<script>
+  export default {
+    methods:{
+      setCookie(){
+        this.$cookies.set("nome","email","celular","endereco","nr-residencia","complemento","senha","repita-senha","pergunta-seguranca","resposta");
+      }
+    }
+  };
+</script>
 
 <script>
   export default {
