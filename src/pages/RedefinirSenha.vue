@@ -16,26 +16,36 @@
 </template>
 
 <script>
-export default {
-    name: 'Redefinis Senha',
-    data() { 
-      return {
-        email: '',
-        pergunta_seguranca: '',
+  export default {
+    methods:{
+      setCookie(){
+        this.$cookies.set("email","perguntaSeg");
       }
-    },
+    }
+  };
+</script>
 
-    methods: {
-      verificaCampos() {
-        if(this.email == '' && this.pergunta_seguranca == ''){
-          alert("Preencha um dos campos!");
-          return false;
-        } else {
-          alert("Um e-mail foi lhe enviado para redefinir sua senha!");
-        }
+<script>
+export default {
+  name: 'Redefinis Senha',
+  data() { 
+    return {
+      email: '',
+      pergunta_seguranca: '',
+    }
+  },
+
+  methods: {
+    verificaCampos() {
+      if(this.email == '' && this.pergunta_seguranca == ''){
+        alert("Preencha um dos campos!");
+        return false;
+      } else {
+        alert("Um e-mail foi lhe enviado para redefinir sua senha!");
       }
     }
   }
+}
 </script>
 
 <style>
